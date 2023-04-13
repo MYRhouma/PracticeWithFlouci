@@ -19,7 +19,7 @@ class CandidaturePrestataire(models.Model):
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
     message = models.TextField(max_length=2048)
-    justificatif = models.ImageField(upload_to="pictures/justificatifs-candidature/",null=True)
+    justificatif = models.ImageField(upload_to="media/pictures/justificatifs-candidature/",null=True)
     status = models.IntegerField(choices=CANDIDATURE_CHOICES, default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     def __str__(self):
